@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './mood-button.component.sass'
 })
 export class MoodButtonComponent {
+  @Input() mood: string = ''; // initial value assigned to declare mood
+  @Output() moodSelected = new EventEmitter<string>();
 
+  onMoodSelect(): void {
+    this.moodSelected.emit(this.mood);
+  }
 }

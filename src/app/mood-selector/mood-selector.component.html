@@ -1,1 +1,4 @@
-<p>mood-selector works!</p>
+<app-mood-button *ngFor="let mood of moods" [mood]="mood" (moodSelected)="onMoodSelected($event)"></app-mood-button>
+<p *ngIf="selectedQuote">{{ selectedQuote.quote }}</p>
+
+

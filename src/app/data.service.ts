@@ -20,9 +20,12 @@ export class DataService {
     return this.http.get<Quote[]>(this.jsonUrl);
   }
 
-  getQuotesByMood(mood: string): Observable<Quote[]> {
-    return this.getQuotes().pipe(
-      map(quotes => quotes.filter(quote => quote.categories.includes(mood)))
+  getQuotesByMood(mood: string): Observable<any> {
+    return this.http.get<any[]>(this.jsonUrl).pipe(
+      map(quotes => {
+        const filteredQuotes = quotes.filter(quote => quote.categories.includes(mood));
+        return filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)];
+      })
     );
   }
 }
