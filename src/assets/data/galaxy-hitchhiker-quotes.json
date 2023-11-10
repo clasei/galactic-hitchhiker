@@ -77,11 +77,11 @@
       },
       {
         "quote": "There's an art to knowing when. Never try to guess. Toast until it smokes and then twenty seconds less.",
-        "categories": ["Happy", "Curious"]
+        "categories": ["Happy", "Curious", "Hungry"]
       },
       {
         "quote": "I'd take the awe of understanding over the awe of ignorance any day.",
-        "categories": ["Curious", "Brave"]
+        "categories": ["Curious", "Brave", "Hungry"]
       },
       {
         "quote": "To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity.",
@@ -109,7 +109,7 @@
       },
       {
         "quote": "The fact that we live at the bottom of a deep gravity well, on the surface of a gas covered planet going around a nuclear fireball 90 million miles away and think this to be normal is obviously some indication of how skewed our perspective tends to be.",
-        "categories": ["Curious", "Brave"]
+        "categories": ["Curious", "Brave", "Hungry"]
       },
       {
         "quote": "The ships hung in the sky in much the same way that bricks don’t.",
@@ -125,7 +125,7 @@
       },
       {
         "quote": "Space is big. Really big. You just won’t believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it’s a long way down the road to the chemist's, but that's just peanuts to space.",
-        "categories": ["Curious", "Happy"]
+        "categories": ["Curious", "Sad", "Happy"]
       },
       {
         "quote": "There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.",
