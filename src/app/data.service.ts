@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 interface Quote {
   quote: string;
-  categories: string[];
+  categories: string[]; // added to manage data type
 }
 
 @Injectable({
