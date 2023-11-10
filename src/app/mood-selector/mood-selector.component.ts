@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MoodButtonComponent } from './mood-button/mood-button.component';
 import { DataService } from '../data.service';
@@ -16,8 +16,9 @@ export class MoodSelectorComponent {
 
   constructor(private dataService: DataService) { }
 
+  @Output() moodChosen = new EventEmitter<string>();
+
   onMoodSelected(mood: string): void {
-    this.selectedQuote = this.dataService.getQuotesByMood(mood);
+    this.moodChosen.emit(mood); 
   }
-  
 }

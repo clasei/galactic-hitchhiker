@@ -12,17 +12,19 @@ import { DataService } from './data.service';
     CommonModule, 
     RouterOutlet, 
     MoodSelectorComponent,
-    HitchhikerQuotesComponent],
+    HitchhikerQuotesComponent
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit {
+  chosenMood: string = ''; // Initialize chosenMood with an empty string
   title = 'galaxy-hitchhiker';
-  quotes: any[] = [];   // quotes' array
+  quotes: any[] = []; // quotes' array
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getQuotes()
+    this.dataService.getQuotes(); // Make sure this is the correct method call
   }
 }
