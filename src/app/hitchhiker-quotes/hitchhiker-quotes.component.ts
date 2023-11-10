@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './hitchhiker-quotes.component.html',
-  styleUrl: '../app.component.sass'
+  styleUrl: './hitchhiker-quotes.component.sass'
 })
 export class HitchhikerQuotesComponent implements OnChanges {
   chosenMood: string = ''; 
