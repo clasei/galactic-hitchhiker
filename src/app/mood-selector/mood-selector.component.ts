@@ -17,6 +17,7 @@ export class MoodSelectorComponent {
   constructor(private dataService: DataService) { }
 
   onMoodSelected(mood: string): void {
-    this.dataService.getQuotesByMood(mood)
+    this.selectedQuote = this.dataService.getQuotesByMood(mood);
   }
+  
 }

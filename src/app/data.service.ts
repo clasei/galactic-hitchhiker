@@ -11,17 +11,18 @@ interface Quote {
 })
 export class DataService {
 
+  constructor() { }
+
   getQuotes(): Quote[] {
     return quotesData;
   }
 
-  getQuotesByMood(mood: string): Quote[] {
+  getQuotesByMood(mood: string): Quote | null {
     const filteredQuotes = quotesData.filter(quote => quote.categories.includes(mood));
-    // one random quote from the filtered list
     if (filteredQuotes.length > 0) {
       const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
-      return [filteredQuotes[randomIndex]];
+      return filteredQuotes[randomIndex];
     }
-    return []; // or return some default quote or empty array
+    return null;
   }
 }
