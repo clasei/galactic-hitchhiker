@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
+interface Quote {
+  quote: string;
+  categories: string[];
+}
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +16,13 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getQuotes(): Observable<any> {
-    return this.http.get(this.jsonUrl);
+  getQuotes(): Observable<Quote[]> {
+    return this.http.get<Quote[]>(this.jsonUrl);
+  }
+
+  getQuotesByMood(mood: string): Observable<Quote[]> {
+    return this.getQuotes().pipe(
+      map(quotes => quotes.filter(quote => quote.categories.includes(mood)))
+    );
   }
 }
-
