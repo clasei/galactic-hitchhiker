@@ -1,7 +1,7 @@
 <div class="mood-selector">
-    <app-mood-button *ngFor="let mood of moods" [mood]="mood" (moodSelected)="onMoodSelected($event)" class="mood-button">
-    </app-mood-button>
-    <p *ngIf="selectedQuote">{{ selectedQuote.quote }}</p>
+    <app-mood-button *ngFor="let mood of moods" [mood]="mood" (moodSelected)="onMoodSelected($event)" class="mood-button"></app-mood-button>
 </div>
 
-
+<div class="quote-display">
+    <p *ngIf="selectedQuote">{{ selectedQuote.quote }}</p>
+</div>

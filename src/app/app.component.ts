@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MoodSelectorComponent } from './mood-selector/mood-selector.component';
+import { HitchhikerQuotesComponent } from './hitchhiker-quotes/hitchhiker-quotes.component';
 import { DataService } from './data.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { DataService } from './data.service';
   imports: [
     CommonModule, 
     RouterOutlet, 
-    MoodSelectorComponent],
+    MoodSelectorComponent,
+    HitchhikerQuotesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
