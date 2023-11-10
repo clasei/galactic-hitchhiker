@@ -11,7 +11,7 @@ import { DataService } from '../data.service';
   styleUrl: './mood-selector.component.sass'
 })
 export class MoodSelectorComponent {
-  moods: string[] = ['Happy', 'Sad', 'Brave', 'Curious', 'Hungry', 'In Love'];
+  moods: string[] = ['Happy', 'Sad', 'Curious', 'Brave', 'In Love', 'Hungry'];
   selectedQuote: any;
 
   constructor(private dataService: DataService) { }
