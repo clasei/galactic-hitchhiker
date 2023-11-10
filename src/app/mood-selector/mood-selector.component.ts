@@ -17,9 +17,6 @@ export class MoodSelectorComponent {
   constructor(private dataService: DataService) { }
 
   onMoodSelected(mood: string): void {
-    this.dataService.getQuotesByMood(mood).subscribe(quote => {
-      this.selectedQuote = quote;
-      console.log('Selected quote:', this.selectedQuote);
-    });
+    this.dataService.getQuotesByMood(mood)
   }
 }

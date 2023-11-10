@@ -1,31 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import quotesData from '../assets/data/galaxy-hitchhiker-quotes.json';
 
 interface Quote {
   quote: string;
-  categories: string[]; // added to manage data type
+  categories: string[];
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private jsonUrl = './assets/data/galaxy-hitchhiker-quotes.json';
 
-  constructor(private http: HttpClient) { }
-
-  getQuotes(): Observable<Quote[]> {
-    return this.http.get<Quote[]>(this.jsonUrl);
+  getQuotes(): Quote[] {
+    return quotesData;
   }
 
-  getQuotesByMood(mood: string): Observable<any> {
-    return this.http.get<any[]>(this.jsonUrl).pipe(
-      map(quotes => {
-        const filteredQuotes = quotes.filter(quote => quote.categories.includes(mood));
-        return filteredQuotes[Math.floor(Math.random() * filteredQuotes.length)];
-      })
-    );
+  getQuotesByMood(mood: string): Quote[] {
+    const filteredQuotes = quotesData.filter(quote => quote.categories.includes(mood));
+    // one random quote from the filtered list
+    if (filteredQuotes.length > 0) {
+      const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
+      return [filteredQuotes[randomIndex]];
+    }
+    return []; // or return some default quote or empty array
   }
 }
