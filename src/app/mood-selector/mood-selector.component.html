@@ -1,3 +1,5 @@
 <div class="mood-selector">
-    <app-mood-button *ngFor="let mood of moods" [mood]="mood" (moodSelected)="onMoodSelected($event)" class="mood-button"></app-mood-button>
+    <app-mood-button *ngFor="let mood of moods" [mood]="mood" 
+        (moodSelected)="onMoodSelected($event)" class="mood-button">
+    </app-mood-button>
 </div>
