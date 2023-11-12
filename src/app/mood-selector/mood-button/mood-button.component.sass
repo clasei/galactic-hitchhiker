@@ -1,0 +1,17 @@
+$button-bg: #fff
+$button-color: #333
+$button-hover-bg: darken($button-bg, 10%)
+$button-padding: 5px 10px
+$button-border-radius: 3px
+
+.mood-button
+  background-color: $button-bg
+  color: $button-color
+  padding: $button-padding
+  border-radius: $button-border-radius
+  border: 1px solid darken($button-bg, 20%)
+  cursor: pointer
+  transition: background-color 0.3s
+
+  &:hover
+    background-color: $button-hover-bg
