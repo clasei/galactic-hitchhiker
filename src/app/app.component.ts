@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 import { MoodSelectorComponent } from './mood-selector/mood-selector.component';
 import { HitchhikerQuotesComponent } from './hitchhiker-quotes/hitchhiker-quotes.component';
 import { DataService } from './data.service';
@@ -11,6 +12,7 @@ import { DataService } from './data.service';
   imports: [
     CommonModule, 
     RouterOutlet, 
+    HeaderComponent,
     MoodSelectorComponent,
     HitchhikerQuotesComponent
   ],
