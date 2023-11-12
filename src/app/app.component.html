@@ -1,4 +1,5 @@
 <div>
+    <app-header></app-header>
     <app-mood-selector (moodChosen)="chosenMood = $event"></app-mood-selector>
     <app-hitchhiker-quotes [selectedMood]="chosenMood"></app-hitchhiker-quotes>
 </div>
