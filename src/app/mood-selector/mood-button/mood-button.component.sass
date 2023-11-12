@@ -1,17 +1,27 @@
-$button-bg: #fff
-$button-color: #333
-$button-hover-bg: darken($button-bg, 10%)
+$button-bg: #7c72f071
+$button-hover-bg: darken($button-bg, 30%)
+$button-active-bg: #c53a3a
 $button-padding: 5px 10px
-$button-border-radius: 3px
+$button-border-radius: 30px
 
 .mood-button
   background-color: $button-bg
-  color: $button-color
+  color: #dcdcdc
+  font-family: 'Open Sans', sans-serif
+  font-weight: 700
+  font-size: 1rem
   padding: $button-padding
   border-radius: $button-border-radius
-  border: 1px solid darken($button-bg, 20%)
+  border: solid #7b71d2
   cursor: pointer
   transition: background-color 0.3s
 
   &:hover
     background-color: $button-hover-bg
+    scale: 1.1
+    transition: 0.5 ease
+
+  &.active
+    background-color: darken($button-bg, 90%)
+    color: #f7f7f7
+    font-weight: bold
