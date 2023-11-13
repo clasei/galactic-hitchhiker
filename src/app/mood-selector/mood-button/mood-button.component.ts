@@ -12,7 +12,7 @@ export class MoodButtonComponent {
   @Input() mood: string = ''; // initial value assigned to declare mood
   @Output() moodSelected = new EventEmitter<string>();
 
-  onMoodSelect(): void {
+  selectMood(): void {
     this.moodSelected.emit(this.mood);
   }
 }
