@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './marvin.component.sass'
 })
 export class MarvinComponent {
-
+  videoSource = 'assets/media/Marvin.mp4';
 }
