@@ -1,8 +1,11 @@
 <div class="mood-selector">
     <p class="mood-question">Hey, how do you feel?</p>
     <div class="mood-buttons-container">
-        <app-mood-button *ngFor="let mood of moods" [mood]="mood" 
-            (moodSelected)="onMoodSelected($event)" class="mood-button">
-        </app-mood-button>
-    </div>
+        <app-mood-button *ngFor="let mood of moods" 
+        [mood]="mood"
+        [isActive]="selectedMood === mood"
+        (moodSelected)="onMoodSelected(mood)"
+        class="mood-button">
+    </app-mood-button>
+  </div>
 </div>

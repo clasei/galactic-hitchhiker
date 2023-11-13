@@ -12,13 +12,14 @@ import { DataService } from '../data.service';
 })
 export class MoodSelectorComponent {
   moods: string[] = ['Happy', 'Sad', 'Curious', 'Brave', 'In Love', 'Hungry'];
-  selectedQuote: any;
-
-  constructor(private dataService: DataService) { }
+  selectedMood: string = '';
 
   @Output() moodChosen = new EventEmitter<string>();
 
+  constructor(private dataService: DataService) { }
+
   onMoodSelected(mood: string): void {
+    this.selectedMood = mood;
     this.moodChosen.emit(mood); 
   }
 }

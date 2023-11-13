@@ -10,7 +10,6 @@ import { DataService } from '../data.service';
   styleUrl: './hitchhiker-quotes.component.sass'
 })
 export class HitchhikerQuotesComponent implements OnChanges {
-  chosenMood: string = ''; 
   @Input() selectedMood?: string;
 
   selectedQuote: any;
