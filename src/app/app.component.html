@@ -1,6 +1,7 @@
 <div>
     <app-header></app-header>
-    <app-mood-selector (moodChosen)="chosenMood = $event"></app-mood-selector>
+    <app-marvin></app-marvin>
     <app-hitchhiker-quotes [selectedMood]="chosenMood"></app-hitchhiker-quotes>
+    <app-mood-selector (moodChosen)="chosenMood = $event"></app-mood-selector>
 </div>
   

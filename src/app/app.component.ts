@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MoodSelectorComponent } from './mood-selector/mood-selector.component';
 import { HitchhikerQuotesComponent } from './hitchhiker-quotes/hitchhiker-quotes.component';
+import { MarvinComponent } from './marvin/marvin.component';
 import { DataService } from './data.service';
 
 @Component({
@@ -14,7 +15,8 @@ import { DataService } from './data.service';
     RouterOutlet, 
     HeaderComponent,
     MoodSelectorComponent,
-    HitchhikerQuotesComponent
+    HitchhikerQuotesComponent,
+    MarvinComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
