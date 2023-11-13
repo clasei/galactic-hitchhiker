@@ -1,2 +1,6 @@
-<button class="mood-button" (click)="selectMood()">{{ mood }}</button>
-
+<button
+  [ngClass]="{'active': isActive}"
+  class="mood-button"
+  (click)="selectMood()">
+  {{ mood }}
+</button>

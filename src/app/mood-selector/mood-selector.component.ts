@@ -12,8 +12,8 @@ import { DataService } from '../data.service';
 })
 export class MoodSelectorComponent {
   moods: string[] = ['Happy', 'Sad', 'Curious', 'Brave', 'In Love', 'Hungry'];
-  selectedQuote: any;
-  selectedMood: string = ''; // Keep track of the selected mood
+  selectedMood: string = '';
+
   @Output() moodChosen = new EventEmitter<string>();
 
   constructor(private dataService: DataService) { }
