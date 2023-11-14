@@ -13,7 +13,6 @@ export class MarvinComponent {
   videoSource = 'assets/media/Marvin.mp4';
 
   playVideo() {
-    console.log('trying to play video');
     this.videoPlayer.nativeElement.play();
   }
 }
