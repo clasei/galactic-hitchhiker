@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,5 +9,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './marvin.component.sass'
 })
 export class MarvinComponent {
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
   videoSource = 'assets/media/Marvin.mp4';
+
+  playVideo() {
+    console.log('trying to play video');
+    this.videoPlayer.nativeElement.play();
+  }
 }
