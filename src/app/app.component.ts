@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -23,23 +23,19 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit {
   @ViewChild(MarvinComponent) marvin!: MarvinComponent;
-
-  ngAfterViewInit() {
-    this.marvin.playVideo();
-  }
-
-  onMoodChosen(mood: string) {
-    this.chosenMood = mood;
-      this.marvin.playVideo();
-  }
-
   chosenMood: string = ''; 
-  title = 'galaxy-hitchhiker';
   quotes: any[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.dataService.getQuotes();
+  }
+
+  onMoodChosen(mood: string) {
+    this.chosenMood = mood;
+    if (this.marvin) {
+      this.marvin.playVideo();
+    }
   }
 }
