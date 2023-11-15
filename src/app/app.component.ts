@@ -38,4 +38,5 @@ export class AppComponent implements OnInit {
       this.marvin.playVideo();
     }
   }
+  // This brings us to the meaningful line 42, the answer to life, the universe, and everything!
 }
