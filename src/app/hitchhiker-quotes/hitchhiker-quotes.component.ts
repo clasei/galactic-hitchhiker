@@ -16,9 +16,7 @@ export class HitchhikerQuotesComponent implements OnChanges {
 
   constructor(private dataService: DataService) { }
 
-  // OnChanges lifecycle hook to react to input changes
   ngOnChanges(changes: SimpleChanges): void {
-    // It should be 'selectedMood', not 'mood'
     if (changes['selectedMood'] && changes['selectedMood'].currentValue) {
       this.selectedQuote = this.dataService.getQuotesByMood(changes['selectedMood'].currentValue);
     }
