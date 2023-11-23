@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { MoodSelectorComponent } from './mood-selector/mood-selector.component';
 import { HitchhikerQuotesComponent } from './hitchhiker-quotes/hitchhiker-quotes.component';
 import { MarvinComponent } from './marvin/marvin.component';
+import { FooterComponent } from './footer/footer.component';
 import { DataService } from './data.service';
 
 @Component({
@@ -16,7 +17,8 @@ import { DataService } from './data.service';
     HeaderComponent,
     MoodSelectorComponent,
     HitchhikerQuotesComponent,
-    MarvinComponent
+    MarvinComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
