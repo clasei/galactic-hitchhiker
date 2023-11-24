@@ -1,4 +1,4 @@
-$button-bg: #7c72f071
+$button-bg: #3f2ef971
 $button-hover-bg: #ff2b2b
 $button-active-bg: #ff2b2b
 $button-padding: 5px 15px
@@ -14,16 +14,19 @@ $button-border-radius: 30px
   text-shadow: 2px 2px 4px rgba(239, 71, 71, 0.7)
   padding: $button-padding
   border-radius: $button-border-radius
-  border: solid #7b71d2
+  border: solid #2716c2
   cursor: pointer
   transition: background-color 0.3s
+  box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.5)
 
   &:hover
     background-color: $button-hover-bg
     scale: 1.1
     transition: 0.5 ease
+    box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.75)
 
   &.active
     background-color: $button-active-bg
     color: #f7f7f7
     font-weight: bold
+    box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.75)
