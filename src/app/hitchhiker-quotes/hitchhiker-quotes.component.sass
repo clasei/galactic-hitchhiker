@@ -4,7 +4,7 @@
   flex-direction: column
   align-items: center
   justify-content: center
-  max-width: 500px
+  max-width: 490px
   min-width: 250px
   margin: 1rem auto
   margin-top: 2rem
@@ -14,6 +14,9 @@
   border-radius: 25px
   box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.5)
   box-sizing: border-box
+  @media screen and (max-width: 768px)
+    padding: 0.75rem
+    margin-top: 1rem
 
 p
   font-family: 'DM Mono', monospace
@@ -22,3 +25,6 @@ p
   line-height: 2rem
   color: #333
   transition: all 0.3s ease
+  @media screen and (max-width: 768px)
+    font-size: 0.8rem
+    line-height: 1.2rem

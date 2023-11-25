@@ -11,25 +11,27 @@ $selector-border-radius: 5px
   padding: 0.5rem
     
 .mood-question
-    font-family: 'DM Mono', monospace
-    font-size: 1.25rem
-    font-weight: 500
-    letter-spacing: 1px
-    text-align: center
-    margin: 1rem auto
-    color: #f1f1f1
-    text-shadow: 2px 2px 4px rgba(239, 71, 71, 0.7)
+  font-family: 'DM Mono', monospace
+  font-size: 1.25rem
+  font-weight: 500
+  letter-spacing: 1px
+  text-align: center
+  margin: 1rem auto
+  color: #f1f1f1
+  text-shadow: 2px 2px 4px rgba(239, 71, 71, 0.7)
+  @media screen and (max-width: 768px)
+    font-size: 1rem
   
 .mood-buttons-container
-    background-color: $selector-bg
-    padding: $selector-padding
-    border-radius: $selector-border-radius
-    display: flex
-    justify-content: center
-    width: 90%
-    max-width: 500px
-    margin: 0 auto
-    margin-bottom: 5rem
-    flex-wrap: wrap
-    gap: 1rem
-    box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.5)
+  background-color: $selector-bg
+  padding: $selector-padding
+  border-radius: $selector-border-radius
+  display: flex
+  justify-content: center
+  width: 90%
+  max-width: 500px
+  margin: 0 auto
+  margin-bottom: 5rem
+  flex-wrap: wrap
+  gap: 1rem
+  box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.5)

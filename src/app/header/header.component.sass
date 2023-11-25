@@ -1,5 +1,6 @@
 $header-bg: #ff2b2b
 $header-font: 'Bungee', cursive
+$small: 768px
 
 .header
   background-color: $header-bg
@@ -21,12 +22,13 @@ h1
   font-size: 2.5rem
   line-height: 3rem
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+  @media screen and (max-width: $small)
+      font-size: 2rem 
 
 h2
     font-family: 'Orbitron', sans-serif
     margin-top: 0
     font-size: 0.75rem 
-    font-weight: normal
     text-transform: uppercase
     letter-spacing: 3px 
     color: #ff2b2b 
@@ -35,12 +37,5 @@ h2
     padding: 0.5rem 1rem
     border-radius: 5px
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
-
-    
-    @media (max-width: 768px)
-
-      h1
-        font-size: 1.2rem
-        padding: 0.5rem
-        margin: 1rem auto
-    
+    @media screen and (max-width: $small)
+      font-size: 0.5rem
