@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { MoodSelectorComponent } from './mood-selector/mood-selector.component';
 import { HitchhikerQuotesComponent } from './hitchhiker-quotes/hitchhiker-quotes.component';
 import { MarvinComponent } from './marvin/marvin.component';
+import { CodeLinkComponent } from './code-link/code-link.component';
 import { FooterComponent } from './footer/footer.component';
 import { DataService } from './data.service';
 
@@ -18,6 +19,7 @@ import { DataService } from './data.service';
     MoodSelectorComponent,
     HitchhikerQuotesComponent,
     MarvinComponent,
+    CodeLinkComponent,
     FooterComponent
   ],
   templateUrl: './app.component.html',
@@ -40,5 +42,4 @@ export class AppComponent implements OnInit {
       this.marvin.playVideo();
     }
   }
-  // This brings us to the meaningful line 42, the answer to life, the universe, and everything!
 }
