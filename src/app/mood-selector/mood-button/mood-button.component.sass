@@ -1,26 +1,25 @@
 $button-bg: #3f2ef971
 $button-hover-bg: #ff2b2b
 $button-active-bg: #ff2b2b
-$button-padding: 5px 15px
+$button-padding: 5px
 $button-border-radius: 30px
 
 .mood-button
   background-color: $button-bg
-  width: 7.5rem
+  width: 7.25rem
   color: #dcdcdc
   font-family:  'DM Mono', monospace
-  font-weight: 500
-  font-size: 1rem
-  text-shadow: 2px 2px 4px rgba(239, 71, 71, 0.7)
+  font-weight: 600
+  font-size: 0.9rem
   padding: $button-padding
   border-radius: $button-border-radius
-  border: solid #2716c2
+  border: 1px solid #71b1ff
   cursor: pointer
   transition: background-color 0.3s
   box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.5)
   @media screen and (max-width: 768px)
     width: 5rem
-    font-size: 0.75rem
+    font-size: 0.7rem
 
   &:hover
     background-color: $button-hover-bg
@@ -28,10 +27,12 @@ $button-border-radius: 30px
     scale: 1.1
     transition: 0.5 ease
     box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.75)
+    text-shadow: 1px 1px 1px #71b1ff
 
   &.active
     background-color: $button-active-bg
     border: solid #ffd7dc9e
     color: #f7f7f7
     font-weight: bold
+    text-shadow: 1px 1px 1px #71b1ff
     box-shadow: 2px 2px 4px rgba(207, 207, 207, 0.75)
